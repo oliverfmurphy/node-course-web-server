@@ -34,3 +34,13 @@ clip < ~/.ssh/id_rsa.pub
 
 git remote add origin https://github.com/oliverfmurphy/node-course-web-server.git
 git push -u origin master
+
+//
+git add .
+git commit -m "message"
+git push
+// makes a new app in the heroku web app, adds a new remote to your git repo
+// origin remote points to our git repository, heroku remote points to our heroku repository
+heroku create
+git push heroku
+heroku open

@@ -117,6 +117,15 @@ app.get('/about', (req, res) => {
   });
 });
 
+// about route
+// render the static about.hbs page
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page'
+    // currentYear: new Date().getFullYear()
+  });
+});
+
 // bad route
 app.get('/bad', (req, res) => {
   res.send({
