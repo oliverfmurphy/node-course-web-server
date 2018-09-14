@@ -2,6 +2,9 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+// port is set by Heroku, if Heroku not available use 3000
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 // allow partials
@@ -125,6 +128,6 @@ app.get('/bad', (req, res) => {
 // first option is the port
 // second option is an optional function, lets us do something when the server is up (can take some time to get started)
 // app.listen(3000);
-app.listen(3000, () => {
-  console.log('Server is up on port 3000.');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}.`);
 });
